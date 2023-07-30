@@ -263,11 +263,48 @@ position: fixed;
     margin-top: 30px;
 }
 
+.nav li:first-child {
+    margin-right: 30px;
+}
+
 .products-container {
     width: 80%;
     height: 110px;
     display: flex;
     flex-direction: column;
+}
+
+.delete {
+    font-size: 30px;
+    color: red;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.back {
+    bottom: 15vh;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    display: flex;
+    cursor: pointer;
+}
+
+.back a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.back i, .back h1{
+    font-size: 30px;
+}
+
+.back i {
+    margin-right: 20px;
 }
 
 .products-container li {
@@ -276,6 +313,7 @@ position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    
     
 }
 
@@ -325,6 +363,7 @@ position: fixed;
 
 .bill .items {
     background-color: grey;
+    margin-bottom: 10vh;
     width: 90%;
     height: 50px;
     }
@@ -336,6 +375,38 @@ position: fixed;
     border-top: 1px solid grey;
 }
 
+.bill h1:nth-child(4) {
+    align-self:flex-start;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.discount {
+    width: 90%;
+    align-items: center;
+    height: 40px;
+    display: flex;
+}
+
+.discount input{
+    width: 75%;
+    font-size: 25px;
+}
+
+.discount input:focus {
+    border: none;
+    outline: none;
+}
+
+.discount button {
+    width: auto;
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+    font-size: 25px;
+    padding: 0 10px;
+}
+
 .total button {
     width: 90%;
     color: white;
@@ -345,6 +416,8 @@ position: fixed;
     margin: 10px 0;
 
 }
+
+
 
 
 .about {
@@ -646,6 +719,35 @@ form button {
 form button {
     width: auto;
 }
+
+.container {
+    height: auto;
+}
+
+.shoppping-cart {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    border-bottom: 0;
+}
+
+.shoppping-cart .cart-products{
+    width: 100%;
+    height: 80vh;
+    border-bottom: 1px solid grey;
+    
+}
+
+.shoppping-cart .bill {
+   width: 100%;
+   height: 50vh;
+}
+
+.bill .total {
+    width: 90%;
+}
+
+
 
 }
 

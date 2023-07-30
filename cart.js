@@ -22,13 +22,19 @@ cartProducts.forEach(product => {
             }else {
                 let numberElement = product.querySelector(".quantity h1");
                 var toNumber = parseInt(numberElement.textContent);
+                let price = product.querySelector(".price");
+                let priceToNumber = parseFloat(price.textContent.replace("$", ""))
 
                 if(toNumber <= 1) {
                     return;
                 }
 
                 toNumber -= 1;
-                numberElement.textContent = toNumber
+                priceToNumber = priceToNumber / (toNumber + 1) * toNumber;
+                price.textContent = `$${priceToNumber.toFixed(2)}`;
+                numberElement.textContent = toNumber;
+
+
             
     }
 })

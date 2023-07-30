@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=2, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
 </head>
 <body>
 <section class="container">
@@ -12,14 +13,14 @@
         <div class="cart-products">
             <header>
                 <h1>Shopping Cart</h1>
-                <h2>3 Items</h2>
+                <h2>4 Items</h2>
             </header>
 
             <ul class="nav">
-                <li>Product Details</li>
+                <li>Details</li>
                 <li>Quantity</li>
                 <li>Price</li>
-                <li>Total</li>
+                <li>Delete</li>
             </ul>
 
             <ul class="products-container">
@@ -34,7 +35,9 @@
 
                     <h1 class="price">$120.000</h1>
 
-                    <h1 class="total">$120.000</h1>
+                    <button class="delete">
+                        <i class="fas fa-x"></i>
+                    </button>
                 </li>
                 <li>
                     <img src="/images/pngwing.com (4).png" alt="">
@@ -47,7 +50,9 @@
 
                     <h1 class="price">$120.000</h1>
 
-                    <h1 class="total">$120.000</h1>
+                    <button class="delete">
+                        <i class="fas fa-x"></i>
+                    </button>
                 </li>
                 <li>
                     <img src="/images/pngwing.com (1).png" alt="">
@@ -60,7 +65,9 @@
 
                     <h1 class="price">$120.000</h1>
 
-                    <h1 class="total">$120.000</h1>
+                    <button class="delete">
+                        <i class="fas fa-x"></i>
+                    </button>
                 </li>
                 <li>
                     <img src="/images/pngwing.com (5).png" alt="">
@@ -73,8 +80,17 @@
 
                     <h1 class="price">$120.000</h1>
 
-                    <h1 class="total">$120.000</h1>
+                    <button class="delete">
+                        <i class="fas fa-x"></i>
+                    </button>
                 </li>
+
+                <div class="back">
+                <a href="index.html">
+                    <i class="fas fa-arrow-left"></i>
+                    <h1>Go Back</h1>
+                </a>
+                </div>
             </ul>
         </div>
         <div class="bill">
@@ -86,7 +102,14 @@
 
             <div class="total">
                 <h1>Total Cost:</h1>
-                <button>Pay</button>
+                <button class="pay">Pay</button>
+            </div>
+
+            <h1>Discount Code:</h1>
+
+            <div class="discount">
+                <input type="" placeholder="code">
+                <button>Apply</button>
             </div>
         </div>
     </div>
