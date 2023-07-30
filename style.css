@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+body {
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    overflow-x: hidden;
+}
+
+
+.navbar{
+display: flex;
+align-items: center;
+justify-content: space-between;
+font-size: 30px;
+width: 100vw;
+height: 10vh;
+background-color: black;
+border-bottom: 1px solid grey;
+position: fixed;
+}
+
+.navbar ul {
+    color: white;
+    display: flex;
+    list-style-type: none;
+}
+
+.navbar ul li {
+    margin-left: 30px;
+    border-bottom: 5px solid transparent;
+}
+
+.navbar ul li:hover {
+    border-bottom: 5px solid red;
+    cursor: pointer;
+}
+
+.navbar .logo {
+    margin-top: 10px;
+}
+
+.navbar .cart-button {
+    font-size: 35px;
+    margin-right: 35px;
+} 
+
+.navbar .cart-button i {
+    margin-left: 15px;
+    color: white;
+}
+
+.products {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.slider .food-container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    background-color: rgb(17, 17, 17);
+    overflow: hidden;
+    color: white;
+    
+}
+
+.food-container .hamburguer, 
+.food-container .hot-dog ,
+.food-container .pizza {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-shrink: 0;
+}
+
+
+.text-content {
+    width: 50%;
+}
+
+.text-content h1 {
+    font-size: 3vw;
+    margin-left: 20px;
+}
+
+.text-content p {
+    font-size: 1vw;
+    margin: 20px;
+}
+
+.more {
+    font-size: 30px;
+    padding: 10px 20px;
+    border: 5px solid red;
+    border-radius: 25px;
+    color: white;
+    background-color: black;
+    margin-left: 20px;
+}
+
+.hamburguer img, 
+.pizza img{
+    width: 50%;
+}
+
+.hot-dog img {
+    margin-left: 25px;
+    width: 40%;
+}
+
+
+.slider #left, #right {
+    font-size: 2.5em;
+    color: red;
+    margin: 30px;
+    cursor: pointer;
+}
+
+
+.more-products {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    overflow: hidden;
+}
+
+.more-products .nav ul{
+    display: flex;
+    user-select: none;
+    list-style: none;
+    margin: 5px;
+    font-size: 1.5em;
+}
+
+.more-products .nav li {
+    margin-right: 20px;
+}
+
+.more-products .nav li:first-child {
+   border-bottom: 5px solid red;
+}
+
+.more-products .product ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: rgb(17, 17, 17);
+    color: white;
+    overflow: hidden;
+}
+
+.product {
+    display: flex;
+    align-items: center;
+}
+
+.product li {
+    display: flex;
+    width: calc(100% / 3);
+    height: 230px;
+    border-right: 1px solid rgb(65, 65, 65);
+    flex-shrink: 0;
+}
+
+
+.product .text {
+    width: 50%;
+    margin-left: 10px;
+}
+
+.text h1 {
+    margin: 10px 0;
+    font-size: 2.5em;
+
+}
+
+.text .add {
+    padding: 0 10px;
+    margin-top: 10px;
+    margin-left: 0;
+}
+
+.product-add-button {
+    font-size: 2em;
+    border-radius: 25px;
+    border: 5px solid red;
+    margin: 10px 0;
+    padding: 0 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    cursor: pointer;
+}
+
+.product img {
+    width: 45%;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(17, 17, 17);
+}
+
+.shoppping-cart {
+    border: 1px solid grey;
+    display: flex;
+    background-color: rgb(17, 17, 17);
+    width: 80%;
+    height: 80%;
+    color: white ;
+}
+
+.cart-products {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    background-color: rgb(17, 17, 17);
+    border-right: 1px solid grey;
+    align-items: center;
+}
+
+.cart-products header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    height: 15%;
+    border-bottom: 1px solid grey;
+}
+
+.nav {
+    width: 80%;
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.products-container {
+    width: 80%;
+    height: 110px;
+    display: flex;
+    flex-direction: column;
+}
+
+.products-container li {
+    width: 100%;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.products-container li img {
+    width: 15%;
+    height: 100px;
+    margin-right: 2%;
+}
+
+.quantity {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.quantity button {
+    width: 30%;
+    cursor: pointer;
+    border: none;
+    font-size: 25px;
+    background-color: transparent;
+    color: white;
+}
+
+.quantity h1 {
+    text-align: center;
+    width: 40px;
+    border: 1px solid grey;
+}
+
+.bill {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 30%;
+    flex-direction: column;
+}
+
+.bill header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid grey;
+    width: 90%;
+    height: 15%;
+}
+
+.bill .items {
+    background-color: grey;
+    width: 90%;
+    height: 50px;
+    }
+
+.bill .total {
+    width: 90%;
+    position: absolute;
+    bottom: 10px;
+    border-top: 1px solid grey;
+}
+
+.total button {
+    width: 90%;
+    color: white;
+    border:none;
+    background-color: rgb(255, 0, 0);
+    height: 50px;
+    margin: 10px 0;
+
+}
+
+
+.about {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid red;
+    width: 80%;
+    height: 75vh;
+    border-radius: 50px;
+    background-color: rgb(17, 17, 17);
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about-text h1 {
+    font-size: 4vw;
+    margin-bottom: 20px;
+}
+
+.about-container img {
+    width: 40%;
+    height: 80%;
+}
+
+.contact {
+    min-height: 100vh;
+    display: flex;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.contact .contact-container {
+    width: 80%;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(102, 69, 69);
+}
+
+.contact .map {
+    width: 50%;
+    height: 70vh;
+background-color: rgb(104, 104, 104);
+}
+
+.contact form {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(17, 17, 17);
+}
+
+form h1 {
+    font-size: 4vw;
+    margin: 20px 40px;
+}
+
+.name-contact, .email ,.password {
+    width: 80%;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    border: 1px solid grey;
+    color: rgb(255, 255, 255);
+    font-size: 25px;
+    height: 40px;
+    margin-bottom:25px;
+}
+
+form i {
+    width: 30px;
+    margin: 0 10px;
+}
+
+form input {
+    width: 80%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 25px;
+    background-color: transparent;
+    color: white;
+}
+
+form input:focus {
+    border:none;
+    outline: none;
+}
+
+form button {
+    font-size: 25px;
+    width: 25%;
+    margin: 20px 40px;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 5px solid red;
+    background-color: black;
+    color: white;
+}
+
+@media (max-width:750px) {
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        font-size: 5vw;
+        z-index: 999;
+    }
+
+    .navbar .logo {
+        height: 80px;
+        margin-top: 0;
+    }
+
+    .navbar .logo img {
+        width: 100px;
+        margin-top: 0;
+    }
+
+    .navbar ul {
+        margin: 5px 0;
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .navbar ul li {
+        margin: 0;
+        width: 100px;
+        text-align: center;
+    }
+
+    .navbar .cart-button {
+        font-size: 1.5em;
+        margin-left: 20px;
+    }
+
+    .products, .about, .contact {
+        height: auto;
+    }
+
+    .about .about-container {
+        margin-top: 23vh;
+    }
+
+    .slider {
+        width: 95%;
+        height: 400px;
+        margin-top: 19vh;
+    }
+
+    .slider #left, #right {
+        
+        margin: 0;
+    }
+
+    .nav {
+        margin-top: 0;
+    }
+
+    .food-container .hamburguer, 
+    .food-container .hot-dog ,
+    .food-container .pizza {
+    flex-direction: column;
+
+    align-items: center;
+    position: relative;
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    margin-top: 10px;
+}
+
+.text-content h1 {
+    font-size: 5vw;
+    margin-top: 30px;
+    margin-left: 0;
+    margin-bottom: 10px;
+    padding: 0;
+}
+
+.text-content p {
+    font-size: 2.5vw;
+    margin: 0 10px;
+}
+.text-content button {
+    margin: 10px 0;
+    font-size: 4vw;
+}
+
+.food-container img {
+    width: 30%;
+    position: absolute;
+    bottom: 0;
+} 
+
+.more-products .nav {
+    width: 100%;
+}
+
+
+.more-products .nav ul{
+    display: flex;
+    user-select: none;
+    list-style: none;
+    width: 100%;
+    margin: 10px;
+    font-size: 3vw;
+}
+
+.more-products .product li{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 3vw;
+    height: auto;
+}
+
+.product .text{
+    width: 75%;
+}
+
+.text p {
+    margin-bottom: 20px;
+}
+
+.text button {
+    width: 160%;
+}
+
+.product img {
+    width: 50%;
+    height: 58%;
+}
+
+.product li {
+    width: 100%;
+}
+
+.about-container {
+    height: auto;
+    border: 3px solid red;
+    width: 95%;
+    flex-direction: column;
+    border-radius: 35px;
+}
+
+.about-text {
+    font-size: 2vw;
+    width: 96%;
+}
+
+.about-text h1 {
+    text-align: center;
+    margin: 10px 0;
+    margin-bottom: 20px;
+}
+
+.about-container img {
+    margin: 20px 0;
+}
+
+.contact .contact-container {
+    flex-direction: column;
+    width: 95%;
+}
+
+.contact-container .map {
+    width: 100%;
+}
+
+.contact-container form {
+    width: 100%;
+    align-items: center;
+}
+form button {
+    width: auto;
+}
+
+}
+
+
+
+
+
+
+
+
