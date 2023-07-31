@@ -362,7 +362,6 @@ position: fixed;
 }
 
 .bill .items {
-    background-color: grey;
     margin-bottom: 10vh;
     width: 90%;
     height: 50px;
@@ -746,6 +745,12 @@ form button {
 .bill .total {
     width: 90%;
 }
+
+.bill .items {
+    margin-bottom: 3vh;
+}
+
+
 
 
 

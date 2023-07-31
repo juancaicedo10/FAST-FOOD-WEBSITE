@@ -90,7 +90,9 @@ function scrollToElement(element) {
  })
 }
 
-const addButton = document.querySelectorAll(".add")
+const addButton = document.querySelectorAll(".product button");
+
+console.log(addButton)
 
 addButton.forEach(button => {
   button.addEventListener("click", addToCart)
@@ -103,34 +105,9 @@ function addToCart(event) {
     return;
   }
 
-  button.innerHTML = "IN" + `<i class="fas fa-shopping-cart"></i>`;
+  button.innerHTML = "IN CART";
 
   button.classList.add("disabled");
-
-  const container = event.target.closest(".product li"); // Corregimos la búsqueda del contenedor;
-  console.log(container)
-  const image = container.querySelector("img").getAttribute("src");
-  const name = container.querySelector(".name").textContent;
-  const price = "$120.000,00";
-  const cartEl = document.querySelector(".products-container")
-
-  if(cartEl !== null) {
-  let newElement = document.createElement("li");
-  newElement.classList.add("cart-product");
-  newElement.innerHTML = `<img src="${image}" alt="">
-  <div class="quantity">
-      <button>+</button>
-      <h1>1</h1>
-      <button>-</button>
-  </div>
-  <h1 class="price">${price}</h1>
-  <h1 class="total">${price}</h1>`;
-
-  console.log("hola")
-  cart.appendChild(newElement);
-  }else {
-    console.log("contenedor no encontrado")
-  }
 }
 
 function iniciarMap(){
@@ -145,4 +122,27 @@ function iniciarMap(){
   });
 }
 
+const contactInputs = document.querySelectorAll("form input")
+
+contactInputs.forEach(input => {
+  input.addEventListener("input", () => {
+    if(input.id == "nameInput") {
+      input.value = input.value.replace(/\b\w/g, char => char.toLocaleUpperCase())
+                               .replace(/[^a-zA-Z\s]+/g, "");
+    }else if (input.id == "emailInput") {
+      input.value = input.value.replace(/\s/, "")
+    }else {
+      input.value = input.value.replace(/[^0-9]/g, "")
+    }
+  })
+});
+
+
+const contactButton = document.querySelector("form button");
+
+contactButton.addEventListener("click", () => {
+const form = document.querySelector("form");
+
+form.innerHTML = `<h1>Thanks for get in touch we'll contact you as soon as posible</h1>`;
+})
 
