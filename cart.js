@@ -1,5 +1,4 @@
 const moreLessButtons = document.querySelectorAll(".quantity button"); 
-
 const cartProducts = document.querySelectorAll(".products-container li");
 
 cartProducts.forEach(product => {
@@ -19,6 +18,9 @@ cartProducts.forEach(product => {
 
                 price.textContent = `$${priceToNumber.toFixed(3)}`;
                 numberElement.textContent = toNumber;
+
+                updateTotal(product)
+
             }else {
                 let numberElement = product.querySelector(".quantity h1");
                 var toNumber = parseInt(numberElement.textContent);
@@ -33,13 +35,33 @@ cartProducts.forEach(product => {
                 priceToNumber = priceToNumber / (toNumber + 1) * toNumber;
                 price.textContent = `$${priceToNumber.toFixed(3)}`;
                 numberElement.textContent = toNumber;
-            
+
+            updateTotal(product)
     }
 })
 
 })
 
 })
+
+function updateTotal() {
+    const cartProducts = document.querySelectorAll(".products-container li");
+    let total = 0;
+
+    cartProducts.forEach(product => {
+        const priceElement = product.querySelector(".price");
+        const price = parseFloat(priceElement.textContent.replace("$", ""))
+        total += price;
+    })
+
+    total = `$${total.toFixed(3)}`
+
+    const totalPay = document.querySelector(".totalPay");
+
+    totalPay.textContent = total
+}
+
+
 
 const discountCodeEl = document.querySelector(".discount input");
 
@@ -53,7 +75,7 @@ discountCodeEl.addEventListener("input", () => {
 
 
     function applyMask(value) {
-        const mask = "####-####-####-####";
+        const mask = "##-##-##";
         let maskedValue = "";
         let j = 0;
       
@@ -68,6 +90,12 @@ discountCodeEl.addEventListener("input", () => {
       
         return maskedValue;
       }
+})
+
+const payBtn = document.querySelector(".pay");
+
+payBtn.addEventListener("click", () => {
+    alert("thanks for your shop :)")
 })
 
 
